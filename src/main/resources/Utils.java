@@ -9,15 +9,13 @@ public class Utils {
 //        Map<String, String> test = MapRules();
 //        Set<String> keySet = test.keySet();
 //
-//
-//
 //        for (String key: keySet){
 //            System.out.println(key+ " -> " + test.get(key));
 //        }
     }
 
     public static Set<String> initLegalSet(){
-        String str = " 1 2 3 4 5 6 7 8 9 0 - = " +
+        String str = "1 2 3 4 5 6 7 8 9 0 - = " +
                 "q w e r t y u i o p [ ] { } | < > ? _ + " +
                 "a s d f g h j k l ; ' \\ " +
                 "` z x c v b n m , . / " +
@@ -115,6 +113,7 @@ public class Utils {
         return map;
     }
 
+    //如果用户按住shift，则进行符号替换
     public static Map<String, String> upperSymbol(){
         Map<String, String> upperSymbol = new HashMap<String, String>();
         upperSymbol.put("-","_");

@@ -10,7 +10,6 @@ import java.util.Date;
 import java.util.Map;
 import java.util.Set;
 
-
 public class GlobalKeyListenerExample implements NativeKeyListener {
 
     public static Map<String ,String > map = Utils.initMap();
