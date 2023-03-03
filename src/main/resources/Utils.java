@@ -6,12 +6,17 @@ public class Utils {
     private static long startTime = date.getTime();
 
     public static void main(String[] args) {
-//        Map<String, String> test = MapRules();
-//        Set<String> keySet = test.keySet();
-//
-//        for (String key: keySet){
-//            System.out.println(key+ " -> " + test.get(key));
-//        }
+        Map<String, String> test = MapRules();
+        Set<String> keySet = test.keySet();
+
+        int temp = 1;
+        for (String key: keySet){
+            System.out.print(key+ " -> " + test.get(key) + "    ");
+            if (temp % 5 == 0){
+                System.out.println();
+            }
+            temp += 1;
+        }
     }
 
     public static Set<String> initLegalSet(){

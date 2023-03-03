@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.Map;
 import java.util.Set;
 
-public class GlobalKeyListenerExample implements NativeKeyListener {
+public class GlobalKeyListener implements NativeKeyListener {
 
     public static Map<String ,String > map = Utils.initMap();
     //是否开启大写键，默认为关
@@ -133,6 +133,6 @@ public class GlobalKeyListenerExample implements NativeKeyListener {
 
         System.out.println("test");
 
-        GlobalScreen.addNativeKeyListener(new GlobalKeyListenerExample());
+        GlobalScreen.addNativeKeyListener(new GlobalKeyListener());
     }
 }

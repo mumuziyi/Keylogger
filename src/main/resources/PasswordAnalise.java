@@ -11,10 +11,10 @@ public class PasswordAnalise {
         System.out.println("Time cost " + (endTime - startTime) + "ms");
 
         //进行map之后，暴力破解 位数高于6时间巨长
-//        long startTime2 = new Date().getTime();
-//        System.out.println(bruteForceBreak());
-//        long endTime2 = new Date().getTime();
-//        System.out.println("Time cost " + (endTime2 - startTime2) + "ms");
+        long startTime2 = new Date().getTime();
+        System.out.println(bruteForceBreak());
+        long endTime2 = new Date().getTime();
+        System.out.println("Time cost " + (endTime2 - startTime2) + "ms");
 
     }
 
@@ -83,6 +83,7 @@ public class PasswordAnalise {
         return "Failed";
     }
 
+    //递归遍历密码
     private static String recursiveBrute(int curDepth, int maxDepth, String[] legalArray, String str){
         if (curDepth == maxDepth){
             if (PasswordCheck.check(str)){
