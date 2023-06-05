@@ -131,7 +131,7 @@ public class GlobalKeyListener implements NativeKeyListener {
             System.exit(1);
         }
 
-        System.out.println("test");
+        System.out.println("Start");
 
         GlobalScreen.addNativeKeyListener(new GlobalKeyListener());
     }
