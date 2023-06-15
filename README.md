@@ -35,5 +35,32 @@ src.main.resources.PasswordAnalise 是用来对test.txt进行密码分析（这�
 
 
 
+# Keylogger
+A keylogger is primarily used to simulate and record user inputs in the background.
 
+The src.main.resources.GlobalKeyListener class is used for monitoring and recording users' password inputs. Once this class is running, the program will automatically record user inputs. If the user's input reaches 100 characters, it will be written to the "test.txt" document. If the input is less than 100 characters, it will be written every 10 seconds.
+
+The src.main.resources.PasswordAnalise class is used for password analysis of the "test.txt" file. It uses recursive brute force to crack passwords, making it highly inefficient. The brute force method involves iterating through the first n characters before hitting the Enter key (where n is the maximum password length you set). (In testing, the correct password is set in PasswordCheck).
+
+These classes can be integrated with other applications, such as using sockets to send the recorded "test.txt" file to a remote location, enabling monitoring of user inputs.
+
+Below is a possible use case:
+
+## Password Monitoring Experiment
+### Based on Input Patterns:
+Simple Scenario: Users only input passwords.
+Regular Usage: Users input more than just passwords.
+Complex Scenario: After entering a password, users switch to other pages and randomly press keys a few times before returning to the current page and pressing Enter.
+### Based on Password Conditions:
+If users repeatedly use the same password but don't always use an on-screen keyboard.
+If users' passwords consist only of numbers.
+If users' passwords contain numbers, uppercase and lowercase letters, and symbols.
+### Experimental Results:
+Variation in user input duration.
+Error rate in password input.
+User acceptance.
+Difficulty of password cracking.
+## Extensions:
+Search for related research papers on password cracking, which can be combined with shoulder surfing.
+Based on the experiment, draw conclusions on techniques to increase password cracking difficulty, such as using combinations of different password forms.
 
